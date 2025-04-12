@@ -77,15 +77,21 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Sistem sumber dari image
   let mainArticle = document.getElementById('mainArticle');
-  if (!mainArticle) return;
   mainArticle.querySelectorAll("img").forEach(img => {
     const addressImages = document.createElement("address");
     const parsedUrl = new URL(img.src);
-    const domain = parsedUrl.hostname;
+    const hostnameParts = parsedUrl.hostname.split('.');
+    
+    let domain;
+    if (hostnameParts.length >= 3 && ['co', 'ac', 'gov', 'or'].includes(hostnameParts[hostnameParts.length - 2])) {
+      domain = hostnameParts.slice(-3).join('.');
+    } else {
+      domain = hostnameParts.slice(-2).join('.');
+    }
+  
     addressImages.textContent = "Sumber: " + domain;
     img.insertAdjacentElement('afterend', addressImages);
   });
-  
   // Button Option Intro
   let likeButtonIntroOn = document.getElementById("likeButton");
   let shareButtonIntroOn = document.getElementById("shareButton");
