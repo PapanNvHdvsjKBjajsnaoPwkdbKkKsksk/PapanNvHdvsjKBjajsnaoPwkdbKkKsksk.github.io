@@ -516,7 +516,7 @@ h1, h2, h3, h4, h5, h6, p {
   /* Isi artikel atau Bagian utama artikel */
   .main-article {
     padding: 15px;
-    width: 42vw;
+    width: 40vw;
     margin: auto;
     background-color: #f4f4f4;
   }
