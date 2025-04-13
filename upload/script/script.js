@@ -119,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var shareUrl = window.location.href;
         navigator.share({
           title: document.title,
-          text: 'Mari baca Artikel: ' + judulArticle,
-          url: shareUrl
+          text: 'Ayo kita baca Artikel: ' + judulArticle + "\n",
+          url: "Link: " + shareUrl
         })
         .catch((error) => sistem.message.log('Gagal berbagi', error));
       } else {
