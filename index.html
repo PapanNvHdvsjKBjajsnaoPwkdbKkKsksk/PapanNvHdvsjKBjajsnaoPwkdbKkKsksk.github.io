@@ -17,7 +17,7 @@
   <link rel="shortcut icon" href="https://jelaskan.my.id/upload/image/main.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/article.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/index.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="./upload/script/index.css" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" rel="stylesheet">
   <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet">
@@ -27,6 +27,9 @@
   <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
   <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Khusus Google -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5387354103237394"
+     crossorigin="anonymous"></script>
   <title>For You</title>
 </head>
 <body>
@@ -35,32 +38,36 @@
   <br>
   <br>
   <br>
-  <section class="container-content-article" id="containerContentArticle">
-    <div class="item-content" onclick="window.location.href='./upload/article.html'">
-      <img src="https://media.istockphoto.com/id/2166028678/id/foto/sustainable-resources-green-building.jpg?s=612x612&w=0&k=20&c=GgzuugnLqYdYau0uBOdDB8c34V0ca8OAX-6eBVM-WnY=" alt="image" />
-      <h1>Text judul</h1>
-      <h2>#Hastag #JelaskanDongMin #YukMiminJelaskan</h2>
-      <p>21 Agustus 2025</p>
-      <hr/>
-    </div>
+  <section class="container-content-article" id="rekomendasiArtikel">
+    <!-- Items rekomendasi artikel -->
   </section>
   
   <script>
     fetch('https://jelaskan.my.id/api/pages-data.json')
       .then(res => res.json())
       .then(data => {
+        console.log("Data berhasil didapat:", data);
+  
         const container = document.getElementById("rekomendasiArtikel");
-    
+        if (!container) {
+          console.error("Elemen dengan ID 'rekomendasiArtikel' tidak ditemukan di HTML.");
+          return;
+        }
+  
         data.forEach(item => {
-          const div = document.createElement("div");
-          div.className = "artikel";
-          div.innerHTML = `
+          const itemArticle = document.createElement("div");
+          itemArticle.className = "item-content";
+          itemArticle.innerHTML = `
             <img src="${item.url_gambar}" alt="${item.judul}">
-            <h3>${item.judul}</h3>
-            <p>${item.hashtag.join(' ')}</p>
-            <a href="${item.url_tujuan}" target="_blank">Baca Selengkapnya</a>
+            <h1>${item.judul}</h1>
+            <h2>${item.hashtag.join(' ')}</h2>
+            <p>${item.time}</p>
+            <hr>
           `;
-          container.appendChild(div);
+          itemArticle.addEventListener("click", () => {
+            window.location.href = item.url_tujuan;
+          });
+          container.appendChild(itemArticle);
         });
       })
       .catch(err => console.error("Gagal ambil data:", err));
