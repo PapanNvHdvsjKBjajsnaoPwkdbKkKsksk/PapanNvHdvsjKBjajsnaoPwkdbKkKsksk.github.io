@@ -1,14 +1,14 @@
 [
   {
-    "judul": "Belajar HTML dari Nol",
-    "url_gambar": "https://example.com/images/html.png",
-    "url_tujuan": "https://example.com/belajar-html",
-    "hashtag": ["#html", "#belajar", "#webdev"]
+    "judul": "Rekomendasi 10 Hewan Peliharaan Yang Cocok Untukmu",
+    "url_gambar": "https://cdn.pixabay.com/photo/2020/03/31/19/20/dog-4988985_1280.jpg",
+    "url_tujuan": "https://jelaskan.my.id/edukasi/rekomendasi-10-hewan-peliharaan.html",
+    "hashtag": ["#Hewan", "#HewanPeliharaan", "#HewanRumah", "#Rekomendasi"]
   },
   {
-    "judul": "Panduan CSS Dasar",
-    "url_gambar": "https://example.com/images/css.png",
-    "url_tujuan": "https://example.com/panduan-css",
-    "hashtag": ["#css", "#styling", "#frontend"]
+    "judul": "Coming Soon, Jelaskan!",
+    "url_gambar": "https://i.imgur.com/7PhG8vn.png",
+    "url_tujuan": "https://jelaskan.my.id/berita/article.html",
+    "hashtag": ["#ComingSoon", "#Jelaskan", "#Information", "#YukSiniMiminJelaskan"]
   }
 ]
