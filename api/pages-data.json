@@ -1,0 +1,14 @@
+[
+  {
+    "judul": "Belajar HTML dari Nol",
+    "url_gambar": "https://example.com/images/html.png",
+    "url_tujuan": "https://example.com/belajar-html",
+    "hashtag": ["#html", "#belajar", "#webdev"]
+  },
+  {
+    "judul": "Panduan CSS Dasar",
+    "url_gambar": "https://example.com/images/css.png",
+    "url_tujuan": "https://example.com/panduan-css",
+    "hashtag": ["#css", "#styling", "#frontend"]
+  }
+]

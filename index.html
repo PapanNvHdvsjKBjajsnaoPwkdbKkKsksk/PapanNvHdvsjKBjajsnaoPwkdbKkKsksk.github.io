@@ -12,11 +12,12 @@
   <meta name="twitter:title" content="Jelaskan - Home">
   <meta name="twitter:description" content="Ga paham? Yuk sini mimin Jelaskan.">
   <meta name="twitter:image" content="https://jelaskan.my.id/upload/image/preview-image.png">
-  <meta name="twitter:url" content="https://caritau.kezt.my.id">
+  <meta name="twitter:url" content="https://jelaskan.my.id">
   <meta name="twitter:site" content="@KeztOfficial">
   <link rel="shortcut icon" href="https://jelaskan.my.id/upload/image/main.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/article.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/index.css" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" rel="stylesheet">
   <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet">
@@ -43,6 +44,27 @@
       <hr/>
     </div>
   </section>
+  
+  <script>
+    fetch('https://jelaskan.my.id/api/pages-data.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("rekomendasiArtikel");
+    
+        data.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "artikel";
+          div.innerHTML = `
+            <img src="${item.url_gambar}" alt="${item.judul}">
+            <h3>${item.judul}</h3>
+            <p>${item.hashtag.join(' ')}</p>
+            <a href="${item.url_tujuan}" target="_blank">Baca Selengkapnya</a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => console.error("Gagal ambil data:", err));
+  </script>
   
   <script src="https://jelaskan.my.id/upload/script/script.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://jelaskan.my.id/upload/script/main.js" type="text/javascript" charset="utf-8"></script>
