@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <div class="contentakhiran">
           <p>Support</p>
+          <a href="https://jelaskan.my.id/contact.html">Contact</a>
+          <a href="https://jelaskan.my.id/tentang.html">Tentang</a>
+          <a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a>
           <a href="https://www.kezt.my.id">Kezt</a>
           <a href="https://saweria.co/silarzai">Suport Kami</a>
         </div>
