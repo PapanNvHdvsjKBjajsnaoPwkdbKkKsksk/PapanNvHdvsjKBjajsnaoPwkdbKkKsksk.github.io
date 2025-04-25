@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM content loaded Main.js");
   
-  let homePagesUrl = "https://jelaskan.my.id/";
-  
   const buttonNavigationOptionM = `
-    <li><a href="${homePagesUrl}"><i class="bi bi-house"></i> Home</a></li>
+    <li><a href="https://jelaskan.my.id/"><i class="bi bi-house"></i> Home</a></li>
     <li><a href=""><i class="bi bi-search"></i> Search</a></li>
     <li><a href=""><i class="bi bi-chat-dots"></i> Chat</a></li>
     <li><a href=""><i class="bi bi-person-fill"></i> Profile</a></li>
   `;
   
   const buttonNavigationOptionD = `
-    <a href="${homePagesUrl}"><i class="bi bi-house"></i></a>
+    <a href="https://jelaskan.my.id/"><i class="bi bi-house"></i></a>
     <a href=""><i class="bi bi-search"></i></a>
     <a href=""><i class="bi bi-chat-dots"></i></a>
     <a href=""><i class="bi bi-person-fill"></i></a>
