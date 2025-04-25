@@ -1,113 +1,32 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk Acak</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-            background-color: #f8f9fa;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .product {
-            width: 250px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .product p {
-            font-size: 14px;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .product a {
-            display: inline-block;
-            padding: 8px 15px;
-            text-decoration: none;
-            background: #007bff;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .product a:hover {
-            background: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#cc1515">
+  <meta property="og:title" content="Rekomendasi 10 Hewan Peliharaan Yang Cocok Untukmu">
+  <meta property="og:description" content="Tau ga sih? Di dunia ini banyak sekali jenis-jenis hewan yang menarik perhatian kita, dan beberapa dapat dan cocok untuk dipelihara di rumah. Tapi, nggak semua hewan cocok buat semua orang. Ada yang butuh perhatian lebih, ada juga yang santai dan gampang dirawat.">
+  <meta property="og:image" content="https://cdn.pixabay.com/photo/2020/03/31/19/20/dog-4988985_1280.jpg">
+  <link rel="shortcut icon" href="https://jelaskan.my.id/upload/image/main.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://jelaskan.my.id/upload/script/article.css" type="text/css" media="all" />
+  <title>Rekomendasi 10 Hewan Peliharaan Yang Cocok Untukmu</title>
+  <meta name="description" content="Tau ga sih? Di dunia ini banyak sekali jenis-jenis hewan yang menarik perhatian kita, dan beberapa dapat dan cocok untuk dipelihara di rumah. Disimak yuk! Ini dia: Rekomendasi 10 Hewan Peliharaan yang Cocok Untukmu. Yuk, sini mimin jelaskan! 1. Landak Mini 2. Kucing 3. Anjing 4. Kelinci Mini"
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5387354103237394"crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5387354103237394" crossorigin="anonymous"></script>
+  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 </head>
 <body>
-
-<h2>Produk Acak</h2>
-<div class="container">
-    <div class="product">
-        <img id="product-image-1" src="" alt="Produk 1">
-        <p id="product-name-1"></p>
-        <a id="product-link-1" href="#" target="_blank">Lihat Produk</a>
-    </div>
-    <div class="product">
-        <img id="product-image-2" src="" alt="Produk 2">
-        <p id="product-name-2"></p>
-        <a id="product-link-2" href="#" target="_blank">Lihat Produk</a>
-    </div>
-    <div class="product">
-        <img id="product-image-3" src="" alt="Produk 3">
-        <p id="product-name-3"></p>
-        <a id="product-link-3" href="#" target="_blank">Lihat Produk</a>
-    </div>
-</div>
-
-<script>
-async function fetchProducts() {
-    try {
-        const response = await fetch("https://caritau.kezt.my.id/api/product.json");
-        const products = await response.json();
-        return products;
-    } catch (error) {
-        console.error("Gagal mengambil data:", error);
-        return [];
-    }
-}
-
-function getRandomProducts(products, count) {
-    const shuffled = [...products].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
-}
-
-function displayRandomProducts(products) {
-    if (products.length === 0) return;
-
-    const selectedProducts = getRandomProducts(products, 3);
+  <section class="main-article" id='mainArticle'></section>
+  <p style="opacity: 0;" id="introInformationTypeArticle">Edukasi</p>
+  <footer id="footerWeb">
     
-    selectedProducts.forEach((product, index) => {
-        document.getElementById(`product-image-${index + 1}`).src = product.image;
-        document.getElementById(`product-name-${index + 1}`).textContent = product.name;
-        document.getElementById(`product-link-${index + 1}`).href = product.link;
-    });
-}
-
-async function startRandomDisplay() {
-    const products = await fetchProducts();
-    if (products.length > 0) {
-        displayRandomProducts(products);
-        setInterval(() => displayRandomProducts(products), 3000);
-    }
-}
-
-startRandomDisplay();
-</script>
-
+  </footer>
+  
+  <script src="https://jelaskan.my.id/upload/script/script.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://jelaskan.my.id/upload/script/main.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://kezt.my.id/lib/kesis-message.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

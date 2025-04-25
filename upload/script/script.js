@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="contentakhiran-container">
         <div class="contentakhiran">
           <p>Project</p>
-          <a href="g90nf.apk">Download</a>
           <a href="">Refresh</a>
         </div>
         <div class="contentakhiran">
