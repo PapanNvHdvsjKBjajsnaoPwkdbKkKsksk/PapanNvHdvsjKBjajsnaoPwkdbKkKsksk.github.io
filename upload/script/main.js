@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const buttonNavigationOptionM = `
     <li><a href="https://jelaskan.my.id/"><i class="bi bi-house"></i> Home</a></li>
-    <li><a href=""><i class="bi bi-search"></i> Search</a></li>    <a href="https://jelaskan.my.id/contact.html">Contact</a>
-    <a href="https://jelaskan.my.id/tentang.html">Tentang</a>
-    <a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a>
+    <li><a href=""><i class="bi bi-search"></i> Search</a></li>
+    <li><a href="https://jelaskan.my.id/contact.html">Contact</a></li>
+    <li><a href="https://jelaskan.my.id/tentang.html">Tentang</a></li>
+    <li><a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a></li>
   `;
   
   const buttonNavigationOptionD = `

@@ -60,7 +60,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
   
   aside > ul > li {
-    padding: 8px 8rem;
     background-color: rgba(255, 255, 255, 0.4);
     font-size: 19px;
     border-radius: 13px;
@@ -70,6 +69,7 @@ h1, h2, h3, h4, h5, h6, p {
   
   
   aside > ul > li > a {
+    padding: 8px 8rem;
     text-decoration: none;
     color: #252525;
     width: 100%;
