@@ -3,16 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const buttonNavigationOptionM = `
     <li><a href="https://jelaskan.my.id/"><i class="bi bi-house"></i> Home</a></li>
-    <li><a href=""><i class="bi bi-search"></i> Search</a></li>
-    <li><a href=""><i class="bi bi-chat-dots"></i> Chat</a></li>
-    <li><a href=""><i class="bi bi-person-fill"></i> Profile</a></li>
+    <li><a href=""><i class="bi bi-search"></i> Search</a></li>    <a href="https://jelaskan.my.id/contact.html">Contact</a>
+    <a href="https://jelaskan.my.id/tentang.html">Tentang</a>
+    <a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a>
   `;
   
   const buttonNavigationOptionD = `
     <a href="https://jelaskan.my.id/"><i class="bi bi-house"></i></a>
     <a href=""><i class="bi bi-search"></i></a>
-    <a href=""><i class="bi bi-chat-dots"></i></a>
-    <a href=""><i class="bi bi-person-fill"></i></a>
+    <a href="https://jelaskan.my.id/contact.html">Contact</a>
+    <a href="https://jelaskan.my.id/tentang.html">Tentang</a>
+    <a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a>
   `;
 
   // Navigasi utama
