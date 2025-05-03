@@ -1,22 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM content loaded Main.js");
   
-  const buttonNavigationOptionM = `
+  const navigationOption = `
     <li><a href="https://jelaskan.my.id/"><i class="bi bi-house"></i> Home</a></li>
-    <li><a href=""><i class="bi bi-search"></i> Search</a></li>
-    <li><a href="https://jelaskan.my.id/contact.html">Contact</a></li>
-    <li><a href="https://jelaskan.my.id/tentang.html">Tentang</a></li>
-    <li><a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="https://jelaskan.my.id/search.html"><i class="bi bi-search"></i> Search</a></li>
+    <li><a href="https://jelaskan.my.id/contact.html"><i class="bi bi-telephone"></i> Kontak</a></li>
+    <li><a href="https://jelaskan.my.id/tentang.html"><i class="bi bi-person-vcard"></i> Tentang Kami</a></li>
+    <li><a href="https://jelaskan.my.id/privacy-policy.html"><i class="bi bi-shield-check"></i> Kebijakan Privasi</a></li>
   `;
   
-  const buttonNavigationOptionD = `
-    <a href="https://jelaskan.my.id/"><i class="bi bi-house"></i></a>
-    <a href=""><i class="bi bi-search"></i></a>
-    <a href="https://jelaskan.my.id/contact.html">Contact</a>
-    <a href="https://jelaskan.my.id/tentang.html">Tentang</a>
-    <a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a>
-  `;
-
   // Navigasi utama
   const mainNavigationOnPublic = document.createElement("header");
   mainNavigationOnPublic.innerHTML = `
@@ -32,28 +24,23 @@ document.addEventListener("DOMContentLoaded", function() {
       <i style="margin-right: 25px;" class="fi fi-rr-octagon-exclamation"></i>
     </div>
     <ul>
-      ${buttonNavigationOptionM}
+      ${navigationOption}
     </ul>
     <a href="https://saweria.co/silarzai">Suport kami</a>
   `;
 
-  const navigationDesktop = document.createElement("div");
-  navigationDesktop.classList.add("navigasi-geser");
+  const navigationDesktop = document.createElement("nav");
   navigationDesktop.innerHTML = `
-    <div class="nav-content">
-      <div id="navigasiGeserPlus" class="toggle-btn">
-        <i class="bi bi-plus" style="transition: 0.7s all;" id="mainToggleButton"></i>
-      </div>
-      <div class="optionButtonDesktop">
-        ${buttonNavigationOptionD}
-      </div>
-    </div>
+    <img src="https://i.imgur.com/tStIlVq.png" alt="Jelaskan Logo" id="navigationImage" />
+    <ul>
+      ${navigationOption}
+    </ul>
   `;
 
   document.body.insertBefore(sidebarNavigationContainer, document.body.firstChild);
   document.body.insertBefore(mainNavigationOnPublic, document.body.firstChild);
   document.body.insertBefore(navigationDesktop, document.body.firstChild);
-
+  
   // Navigasi Sidebar
   const buttonOpenSidebar = document.getElementById("buttonOpenSidebar");
   const buttonCloseSidebar = document.getElementById("buttonCloseSidebar");
@@ -69,70 +56,34 @@ document.addEventListener("DOMContentLoaded", function() {
       sidebarNavigationContainer.style.width = "0vw";
     });
   }
-
-  // Navigasi Geser
-  const navigasiGeserPlus = document.getElementById("navigasiGeserPlus");
-  const navigasiGeser = document.querySelector(".navigasi-geser");
-  const mainToggleButton = document.getElementById("mainToggleButton");
-  const optionButtonDesktop = document.querySelector(".optionButtonDesktop");
-  let startX, startY;
-
-  if (navigasiGeser) {
-    navigasiGeser.addEventListener("touchstart", function(event) {
-      startX = event.touches[0].clientX - navigasiGeser.offsetLeft;
-      startY = event.touches[0].clientY - navigasiGeser.offsetTop;
-
-      document.addEventListener("touchmove", touchmove);
-      document.addEventListener("touchend", touchend);
-    });
-  }
-
-  function touchmove(event) {
-    event.preventDefault();
-    var newX = event.touches[0].clientX - startX;
-    var newY = event.touches[0].clientY - startY;
-
-    navigasiGeser.style.left = newX + "px";
-    navigasiGeser.style.top = newY + "px";
-  }
-
-  function touchend() {
-    document.removeEventListener("touchmove", touchmove);
-    document.removeEventListener("touchend", touchend);
-  }
-
-  // Toggle Button
-  const toggleBtn = navigasiGeser.querySelector(".toggle-btn");
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      const currentColor = window.getComputedStyle(toggleBtn).backgroundColor;
-      if (currentColor === "rgb(208, 208, 208)") {
-        toggleBtn.style.backgroundColor = "white";
-        mainToggleButton.style.transform = "rotate(0deg)";
-        optionButtonDesktop.style.height = "0px"
-      } else {
-        toggleBtn.style.backgroundColor = "#d0d0d0";
-        mainToggleButton.style.transform = "rotate(-135deg)";
-        optionButtonDesktop.style.height = "120px";
-      }
-    });
-  }
   
-  navigasiGeser.addEventListener("mousedown", () => {
-    navigasiGeser.addEventListener("mousemove", onDrag);
-  });
-
-  navigasiGeser.addEventListener("mouseup", () => {
-    navigasiGeser.removeEventListener("mousemove", onDrag);
-  });
-
-  navigasiGeser.addEventListener("mouseleave", () => {
-    navigasiGeser.removeEventListener("mousemove", onDrag);
-  });
-
-  // Show full text when clicked
-  function showFullText(element) {
-    sistem.message.info(element.innerText);
-  }
+  // Footer yang bagian bawah itu
+  const footerWebsite = document.getElementById("footerWeb");
+  footerWebsite.innerHTML = `
+    <section class="akhiran">
+      <h1>Jelaskan itu apa?</h1>
+      <p>Jelaskan adalah sumber informasi yang mencakup berbagai aspek kehidupan, mulai dari berita terbaru, edukasi, hingga informasi menarik lainnya. Dengan pendekatan yang informatif dan mudah dipahami, Jelaskan hadir untuk memenuhi rasa ingin tahu pembaca mengenai berbagai topik, baik yang sedang tren maupun yang jarang dibahas. Di sini, kamu bisa menemukan artikel seputar teknologi, sains, sejarah, budaya, serta perkembangan dunia yang up-to-date. Selain itu, ada juga konten edukatif yang membantu memperluas wawasan, mulai dari tips belajar, sains populer, hingga inovasi terbaru. Tak ketinggalan, Jelaskan juga menyajikan berita terkini dengan sudut pandang yang menarik, memberikan pemahaman mendalam tanpa kehilangan esensi informasi.</p>
+      <div class="contentakhiran-container">
+        <div class="contentakhiran">
+          <p>Project</p>
+          <a href="">Refresh</a>
+        </div>
+        <div class="contentakhiran">
+          <p>Support</p>
+          <a href="https://jelaskan.my.id/contact.html">Kontak</a>
+          <a href="https://jelaskan.my.id/tentang.html">Tentang Kami</a>
+          <a href="https://jelaskan.my.id/privacy-policy.html">Kebijakan Privasi</a>
+          <a href="https://www.kezt.my.id">Kezt</a>
+          <a href="https://saweria.co/silarzai">Suport Kami</a>
+        </div>
+      </div>
+      <section class="sosialmedia">
+        <a href=""><i class="fi fi-brands-tik-tok"></i></a>
+        <a href=""><i class="fi fi-brands-twitter-alt"></i></a>
+        <a href=""><i class="fi fi-brands-whatsapp"></i></a>
+        <a href=""><i class="fi fi-brands-instagram"></i></a>
+      </section>
+      <p>&copy 2025 Jelaskan</p>
+    </section>
+  `;
 });

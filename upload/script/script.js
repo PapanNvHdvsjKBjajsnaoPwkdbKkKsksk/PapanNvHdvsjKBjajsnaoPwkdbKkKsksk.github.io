@@ -18,40 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const sosialMediaOptionAdd = document.getElementById("sosialMediaOption");
   sosialMediaOptionAdd.style = "order: 1;";
   sosialMediaOptionAdd.innerHTML = `
-    <a href="https://whatsapp.com/channel/0029Vb3cz5l0wajxNVmGcR2x" style="background-image: url('./image/whatsapp.jpeg')"></a>
-    <a href="https://x.com/KeztOfficial?t=4d9COf5KwFw_TvDmi6qlZQ&s=09" style="background-image: url('./image/x.png')"></a>
-    <a href="https://www.instagram.com/kezt_official" style="background-image: url('./image/instagram.jpeg')"></a>
-    <a href="tiktok.com/@kezt_official" style="background-image: url('./image/tiktok.png')"></a>
-  `;
-  
-  // Footer yang bagian bawah itu
-  const footerWebsite = document.getElementById("footerWeb");
-  footerWebsite.innerHTML = `
-    <section class="akhiran">
-      <h1>Jelaskan itu apa?</h1>
-      <p>Jelaskan adalah sumber informasi yang mencakup berbagai aspek kehidupan, mulai dari berita terbaru, edukasi, hingga informasi menarik lainnya. Dengan pendekatan yang informatif dan mudah dipahami, Jelaskan hadir untuk memenuhi rasa ingin tahu pembaca mengenai berbagai topik, baik yang sedang tren maupun yang jarang dibahas. Di sini, kamu bisa menemukan artikel seputar teknologi, sains, sejarah, budaya, serta perkembangan dunia yang up-to-date. Selain itu, ada juga konten edukatif yang membantu memperluas wawasan, mulai dari tips belajar, sains populer, hingga inovasi terbaru. Tak ketinggalan, Jelaskan juga menyajikan berita terkini dengan sudut pandang yang menarik, memberikan pemahaman mendalam tanpa kehilangan esensi informasi.</p>
-      <div class="contentakhiran-container">
-        <div class="contentakhiran">
-          <p>Project</p>
-          <a href="">Refresh</a>
-        </div>
-        <div class="contentakhiran">
-          <p>Support</p>
-          <a href="https://jelaskan.my.id/contact.html">Contact</a>
-          <a href="https://jelaskan.my.id/tentang.html">Tentang</a>
-          <a href="https://jelaskan.my.id/privacy-policy.html">Privacy Policy</a>
-          <a href="https://www.kezt.my.id">Kezt</a>
-          <a href="https://saweria.co/silarzai">Suport Kami</a>
-        </div>
-      </div>
-      <section class="sosialmedia">
-        <a href=""><i class="fi fi-brands-tik-tok"></i></a>
-        <a href=""><i class="fi fi-brands-twitter-alt"></i></a>
-        <a href=""><i class="fi fi-brands-whatsapp"></i></a>
-        <a href=""><i class="fi fi-brands-instagram"></i></a>
-      </section>
-      <p>&copy 2025 Jelaskan</p>
-    </section>
+    <a href="https://whatsapp.com/channel/0029Vb3cz5l0wajxNVmGcR2x" style="background-image: url('https://jelaskan.my.id/upload/image/whatsapp.jpeg')"></a>
+    <a href="https://x.com/KeztOfficial?t=4d9COf5KwFw_TvDmi6qlZQ&s=09" style="background-image: url('https://jelaskan.my.id/upload/image/x.png')"></a>
+    <a href="https://www.instagram.com/kezt_official" style="background-image: url('https://jelaskan.my.id/upload/image/instagram.jpeg')"></a>
+    <a href="tiktok.com/@kezt_official" style="background-image: url('https://jelaskan.my.id/upload/image/tiktok.png')"></a>
   `;
   
   // Style and Module css

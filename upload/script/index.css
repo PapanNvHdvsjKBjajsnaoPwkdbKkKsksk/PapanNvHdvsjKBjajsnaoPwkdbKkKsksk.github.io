@@ -25,7 +25,6 @@ body {
   }
   
   .container-content-article > .item-content {
-    display: block;
     width: 100%;
     height: auto;
     overflow: hidden;
