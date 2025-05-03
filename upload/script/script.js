@@ -24,28 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <a href="tiktok.com/@kezt_official" style="background-image: url('https://jelaskan.my.id/upload/image/tiktok.png')"></a>
   `;
   
-  // Style and Module css
-  const moduleSuportArticle = [
-    "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css",
-    "https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css",
-    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  ];
-  
   // Load to Web
   const mainIntroArticle = document.getElementById("articleIntro");
   mainIntroArticle.insertBefore(introNavigationOnPublic, mainIntroArticle.firstChild);
-  moduleSuportArticle.forEach(href => {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-    document.head.appendChild(link);
-  });
   
   // Sistem sumber dari image
   let mainArticle = document.getElementById('mainArticle');
