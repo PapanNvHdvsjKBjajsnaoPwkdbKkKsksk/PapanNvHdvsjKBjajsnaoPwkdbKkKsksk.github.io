@@ -18,55 +18,77 @@
   <link rel="stylesheet" href="./upload/script/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="./upload/script/article.css" type="text/css" media="all" />
   <link rel="stylesheet" href="./upload/script/index.css" type="text/css" media="all" />
-  <!-- Khusus Google -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5387354103237394"
-     crossorigin="anonymous"></script>
   <title>Jelaskan</title>
 </head>
 <body>
-  
-  <br>
-  <br>
-  <br>
-  <br>
+  <br><br><br><br>
   <section class="container-content-article" id="rekomendasiArtikel">
     <!-- Items rekomendasi artikel -->
   </section>
   <div id="footerWeb"></div>
-  
+
   <script>
-    fetch('https://jelaskan.my.id/api/pages-data.json')
-      .then(res => res.json())
+    // Ganti dengan URL GitHub API untuk mendapatkan daftar file di folder 'edukasi'
+    fetch('https://api.github.com/repos/PapanNvHdvsjKBjajsnaoPwkdbKkKsksk/PapanNvHdvsjKBjajsnaoPwkdbKkKsksk.github.io/contents/edukasi')
+      .then(res => res.json())  // Mengambil data dalam format JSON
       .then(data => {
         console.log("Data berhasil didapat:", data);
-  
-        const container = document.getElementById("rekomendasiArtikel");
-        if (!container) {
-          console.error("Elemen dengan ID 'rekomendasiArtikel' tidak ditemukan di HTML.");
-          return;
-        }
-  
-        data.forEach(item => {
-          const itemArticle = document.createElement("div");
-          itemArticle.className = "item-content";
-          itemArticle.innerHTML = `
-            <img src="${item.url_gambar}" alt="${item.judul}">
-            <h1>${item.judul}</h1>
-            <h2>${item.hashtag.join(' ')}</h2>
-            <p>${item.time}</p>
-            <hr>
-          `;
-          itemArticle.addEventListener("click", () => {
-            window.location.href = item.url_tujuan;
+        
+        const articles = data.filter(item => item.type === 'file' && item.name.endsWith('.html')).map(item => {
+          return fetch(item.download_url)  // Ambil file HTML dari URL download
+            .then(res => res.text())  // Parse file HTML menjadi teks
+            .then(html => {
+              // Gunakan DOMParser untuk mengonversi HTML menjadi elemen DOM
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, "text/html");
+
+              // Ambil data dari elemen-elemen yang ada di HTML
+              const title = doc.querySelector('#titleArticle') ? doc.querySelector('#titleArticle').innerText : '';
+              const hashtags = doc.querySelector('#hastagArticle') ? doc.querySelector('#hastagArticle').innerText : '';
+              const date = doc.querySelector('#dateUpload') ? doc.querySelector('#dateUpload').innerText : '';
+              const image = doc.querySelector('#imageArticle') ? doc.querySelector('#imageArticle').src : '';
+
+              return {
+                title,
+                hashtags,
+                date,
+                image,
+                name: item.name  // Menambahkan nama file untuk URL
+              };
+            });
+        });
+
+        // Tunggu hingga semua artikel selesai diambil
+        Promise.all(articles).then(articlesData => {
+          const container = document.getElementById("rekomendasiArtikel");
+          if (!container) {
+            console.error("Elemen dengan ID 'rekomendasiArtikel' tidak ditemukan di HTML.");
+            return;
+          }
+
+          // Tampilkan data di halaman
+          articlesData.forEach(item => {
+            const itemArticle = document.createElement("div");
+            itemArticle.className = "item-content";
+            itemArticle.innerHTML = `
+              <img src="${item.image}" alt="${item.title}">
+              <h1>${item.title}</h1>
+              <h2>${item.hashtags}</h2>
+              <p>${item.date}</p>
+              <hr>
+            `;
+            let urlLaman = "https://jelaskan.my.id/edukasi/" + item.name;
+            itemArticle.addEventListener("click", () => {
+              window.location.href = urlLaman;
+            });
+            container.appendChild(itemArticle);
           });
-          container.appendChild(itemArticle);
         });
       })
       .catch(err => console.error("Gagal ambil data:", err));
   </script>
-  
+
   <script src="./upload/script/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="./upload/script/script.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://kezt.my.id/lib/kesis-message.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
