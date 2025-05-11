@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
   script.src = "https://jelaskan.my.id/upload/script/article.js";
   script.type = "text/javascript";
   script.charset = "utf-8";
+  script.defer = true;
   document.head.appendChild(script);
   
 });
