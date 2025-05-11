@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tombol.addEventListener("click", function () {
     if (!membaca) {
       let textArticle = document.getElementById("mainArticle").innerText;
-      suara.text = textArticle; // Ganti sesuai isi artikel
+      suara.text = textArticle;
       window.speechSynthesis.speak(suara);
       tombol.className = "fi fi-rr-volume-slash";
       membaca = true;
