@@ -105,6 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
     link.href = href;
     document.head.appendChild(link);
   });
+
+var script = document.createElement('script');
+script.src = "https://jelaskan.my.id/upload/script/article.js";
+script.type = "text/javascript";
+script.charset = "utf-8";
+document.body.appendChild(script);
   
-  document.body.appendChild('<script src="https://jelaskan.my.id/upload/script/article.js" type="text/javascript" charset="utf-8"></script>');
 });
