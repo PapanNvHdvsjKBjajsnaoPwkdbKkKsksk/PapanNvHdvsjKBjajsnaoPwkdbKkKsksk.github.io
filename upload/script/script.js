@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <span class="icons">
       <i class="fi fi-ss-heart" id="likeButton"></i>
       <i class="fi fi-ss-share" id="shareButton"></i>
+      <i class="fi fi-rr-volume" onclick="bacaArtikel()" id="bacakanArtikel"></i>
       <i class="fi fi-rs-circle-ellipsis-vertical" id="moreOptionButton"></i>
     </span>
   `;
