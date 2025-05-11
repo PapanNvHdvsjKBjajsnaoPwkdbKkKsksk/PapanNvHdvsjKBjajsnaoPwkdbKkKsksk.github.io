@@ -1,35 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const bacakanArtikelButton = document.getElementById("bacakanArtikel");
+  const tombol = document.getElementById("bacakanArtikel");
+  const suara = new SpeechSynthesisUtterance();
+  suara.lang = 'id-ID';
 
-  const suaraBantu = new SpeechSynthesisUtterance();
-  suaraBantu.lang = 'id-ID';
+  let membaca = false;
 
-  let sedangMembaca = false;
-
-  function bacaArtikel() {
-    const teksArtikel = document.getElementById("mainArticle").innerText;
-    suaraBantu.text = teksArtikel;
-    window.speechSynthesis.speak(suaraBantu);
-    bacakanArtikelButton.className = "fi fi-rr-volume-slash";
-    sedangMembaca = true;
-  }
-
-  function stopBaca() {
-    window.speechSynthesis.cancel();
-    bacakanArtikelButton.className = "fi fi-rr-volume";
-    sedangMembaca = false;
-  }
-
-  bacakanArtikelButton.addEventListener("click", function () {
-    if (!sedangMembaca) {
-      bacaArtikel();
+  tombol.addEventListener("click", function () {
+    if (!membaca) {
+      suara.text = document.getElementById("mainArticle").innerText;
+      window.speechSynthesis.speak(suara);
+      tombol.className = "fi fi-rr-volume-slash";
+      membaca = true;
     } else {
-      stopBaca();
+      window.speechSynthesis.cancel();
+      tombol.className = "fi fi-rr-volume";
+      membaca = false;
     }
   });
 
-  suaraBantu.onend = function () {
-    bacakanArtikelButton.className = "fi fi-rr-volume";
-    sedangMembaca = false;
+  suara.onend = function () {
+    tombol.className = "fi fi-rr-volume";
+    membaca = false;
   };
 });
