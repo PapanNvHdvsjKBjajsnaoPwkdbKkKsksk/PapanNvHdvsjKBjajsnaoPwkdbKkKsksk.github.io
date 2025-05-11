@@ -215,11 +215,20 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 1px;
   }
   
+  .main-article > p > span {
+    color: #cc1515;
+    font-weight: bold;
+  }
+  
+  .main-article > ul {
+    margin: 0;
+  }
+  
   .main-article > ol {
     margin: 0;
   }
   
-  .main-article > ol > li {
+  .main-article > ol+ul > li {
     color: #202020;
     font-family: Nunito, "Sans-Serif";
     font-size: 19px;
@@ -566,11 +575,20 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 1px;
   }
   
+  .main-article > p > span {
+    color: #cc1515;
+    font-weight: bold;
+  }
+  
+  .main-article > ul {
+    margin: 0;
+  }
+  
   .main-article > ol {
     margin: 0;
   }
   
-  .main-article > ol > li {
+  .main-article > ol+ul > li {
     color: #202020;
     font-family: Nunito, "Sans-Serif";
     font-size: 19px;
