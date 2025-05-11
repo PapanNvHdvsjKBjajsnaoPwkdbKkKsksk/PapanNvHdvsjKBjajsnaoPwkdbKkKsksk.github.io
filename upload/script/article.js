@@ -44,4 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
     tombol.className = "fi fi-rr-volume";
     membaca = false;
   };
+
+  window.addEventListener("beforeunload", function () {
+  window.speechSynthesis.cancel();
+});
 });
