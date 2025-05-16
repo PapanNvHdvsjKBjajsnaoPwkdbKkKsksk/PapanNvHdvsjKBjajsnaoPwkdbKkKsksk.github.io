@@ -39,19 +39,19 @@ body {
   .container-content-article > .item-content > h1 {
     color: rgb(26,26,26);
     font-weight: 500;
-    font-size: 28px;
+    font-size: 20px;
   }
   
   .container-content-article > .item-content > h2 {
     color: rgb(12,12,12);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 15px;
   }
   
   .container-content-article > .item-content > p {
     color: rgb(100,100,100);
     font-weight: 400;
-    font-size: 19px;
+    font-size: 10px;
   }
 }
 
@@ -87,19 +87,19 @@ body {
   .container-content-article > .item-content > h1 {
     color: rgb(26,26,26);
     font-weight: 500;
-    font-size: 28px;
+    font-size: 20px;
   }
   
   .container-content-article > .item-content > h2 {
     color: rgb(12,12,12);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 15px;
   }
   
   .container-content-article > .item-content > p {
     color: rgb(100,100,100);
     font-weight: 400;
-    font-size: 19px;
+    font-size: 10px;
   }
 
 }
