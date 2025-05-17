@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const footerWebsite = document.getElementById("footerWeb");
   footerWebsite.innerHTML = `
     <section class="akhiran">
-      <h1>Jelaskan itu apa?</h1>
-      <p>Jelaskan adalah sumber informasi yang mencakup berbagai aspek kehidupan, mulai dari berita terbaru, edukasi, hingga informasi menarik lainnya. Dengan pendekatan yang informatif dan mudah dipahami, Jelaskan hadir untuk memenuhi rasa ingin tahu pembaca mengenai berbagai topik, baik yang sedang tren maupun yang jarang dibahas. Di sini, kamu bisa menemukan artikel seputar teknologi, sains, sejarah, budaya, serta perkembangan dunia yang up-to-date. Selain itu, ada juga konten edukatif yang membantu memperluas wawasan, mulai dari tips belajar, sains populer, hingga inovasi terbaru. Tak ketinggalan, Jelaskan juga menyajikan berita terkini dengan sudut pandang yang menarik, memberikan pemahaman mendalam tanpa kehilangan esensi informasi.</p>
+      <p>Jelaskan adalah sumber informasi yang mencakup berbagai aspek kehidupan, mulai dari berita terbaru, edukasi, hingga informasi menarik lainnya.</p>
       <div class="contentakhiran-container">
         <div class="contentakhiran">
           <p>Credits</p>
