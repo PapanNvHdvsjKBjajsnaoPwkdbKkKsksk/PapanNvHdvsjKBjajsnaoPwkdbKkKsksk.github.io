@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://jelaskan.my.id/sitemap.xml
