@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const sosialMediaOptionAdd = document.getElementById("sosialMediaOption");
   sosialMediaOptionAdd.style = "order: 1;";
   sosialMediaOptionAdd.innerHTML = `
-    <a href="https://whatsapp.com/channel/0029Vb3cz5l0wajxNVmGcR2x" style="background-image: url('https://jelaskan.my.id/upload/image/whatsapp.jpeg')"></a>
+    <a href="https://whatsapp.com/channel/0029VbAdoqVFXUuZTfOWLX2U" style="background-image: url('https://jelaskan.my.id/upload/image/whatsapp.jpeg')"></a>
     <a href="https://x.com/KeztOfficial?t=4d9COf5KwFw_TvDmi6qlZQ&s=09" style="background-image: url('https://jelaskan.my.id/upload/image/x.png')"></a>
     <a href="https://www.instagram.com/kezt_official" style="background-image: url('https://jelaskan.my.id/upload/image/instagram.jpeg')"></a>
-    <a href="tiktok.com/@kezt_official" style="background-image: url('https://jelaskan.my.id/upload/image/tiktok.png')"></a>
+    <a href="https://tiktok.com/@kezt_official" style="background-image: url('https://jelaskan.my.id/upload/image/tiktok.png')"></a>
   `;
   
   // Load to Web
