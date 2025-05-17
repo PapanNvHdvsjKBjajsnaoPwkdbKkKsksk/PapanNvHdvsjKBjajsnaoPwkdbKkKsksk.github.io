@@ -65,23 +65,22 @@ document.addEventListener("DOMContentLoaded", function() {
       <p>Jelaskan adalah sumber informasi yang mencakup berbagai aspek kehidupan, mulai dari berita terbaru, edukasi, hingga informasi menarik lainnya. Dengan pendekatan yang informatif dan mudah dipahami, Jelaskan hadir untuk memenuhi rasa ingin tahu pembaca mengenai berbagai topik, baik yang sedang tren maupun yang jarang dibahas. Di sini, kamu bisa menemukan artikel seputar teknologi, sains, sejarah, budaya, serta perkembangan dunia yang up-to-date. Selain itu, ada juga konten edukatif yang membantu memperluas wawasan, mulai dari tips belajar, sains populer, hingga inovasi terbaru. Tak ketinggalan, Jelaskan juga menyajikan berita terkini dengan sudut pandang yang menarik, memberikan pemahaman mendalam tanpa kehilangan esensi informasi.</p>
       <div class="contentakhiran-container">
         <div class="contentakhiran">
-          <p>Project</p>
-          <a href="">Refresh</a>
+          <p>Credits</p>
+          <a href="https://www.kezt.my.id">Kezt</a>
         </div>
         <div class="contentakhiran">
           <p>Support</p>
           <a href="https://jelaskan.my.id/contact.html">Kontak</a>
           <a href="https://jelaskan.my.id/tentang.html">Tentang Kami</a>
           <a href="https://jelaskan.my.id/privacy-policy.html">Kebijakan Privasi</a>
-          <a href="https://www.kezt.my.id">Kezt</a>
           <a href="https://saweria.co/silarzai">Suport Kami</a>
         </div>
       </div>
       <section class="sosialmedia">
-        <a href=""><i class="fi fi-brands-tik-tok"></i></a>
-        <a href=""><i class="fi fi-brands-twitter-alt"></i></a>
-        <a href=""><i class="fi fi-brands-whatsapp"></i></a>
-        <a href=""><i class="fi fi-brands-instagram"></i></a>
+        <a href="httpz://tiktok.com/@kezt_official"><i class="fi fi-brands-tik-tok"></i></a>
+        <a href="https://x.com/KeztOfficial?t=4d9COf5KwFw_TvDmi6qlZQ&s=09"><i class="fi fi-brands-twitter-alt"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbAdoqVFXUuZTfOWLX2U"><i class="fi fi-brands-whatsapp"></i></a>
+        <a href="https://www.instagram.com/kezt_official"><i class="fi fi-brands-instagram"></i></a>
       </section>
       <p>&copy 2025 Jelaskan</p>
     </section>
@@ -112,5 +111,4 @@ document.addEventListener("DOMContentLoaded", function() {
   script.charset = "utf-8";
   script.defer = true;
   document.head.appendChild(script);
-  
 });
