@@ -43,53 +43,40 @@
   <br><br><br><br>
 
   <section class="container-content-article" id="rekomendasiArtikel">
-    <!-- Items rekomendasi artikel -->
     <!-- Artikel akan dimuat otomatis lewat JSON -->
   </section>
 
   <div id="footerWeb"></div>
 
-<script>
-fetch('https://api.github.com/repos/jajskaoowoeixnmamqporisna/jajskaoowoeixnmamqporisna.github.io/contents/edukasi')
-  .then(response => response.json())
-  .then(files => {
-    const htmlFiles = files.filter(file => file.name.endsWith('.html'));
-
-    const container = document.getElementById('rekomendasiArtikel');
-
-    htmlFiles.forEach(file => {
-      fetch(file.download_url)
-        .then(res => res.text())
-        .then(htmlText => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(htmlText, 'text/html');
-
-          const title = doc.querySelector('#titleArticle')?.innerText || 'Tanpa Judul';
-          const date = doc.querySelector('#dateUpload')?.innerText || 'Tanpa Tanggal';
-          const image = doc.querySelector('#imageArticle')?.src || '';
-          const hashtags = doc.querySelector('#hastagArticle')?.innerText || '';
-
-          const articleElement = document.createElement('a');
-          articleElement.href = `https://jelaskan.my.id/edukasi/${file.name}`;
-          articleElement.style.textDecoration = "none";
-          articleElement.style.color = "inherit";
-
-          articleElement.innerHTML = `
-            <div class="item-content">
-              <img src="${image}" alt="${title}" />
-              <h1>${title}</h1>
-              <h2>${hashtags}</h2>
-              <p>${date}</p>
-              <hr>
-            </div>
+  <script>
+    fetch('./api/pages-data.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("rekomendasiArtikel");
+        if (!container) return;
+        
+        data.slice().reverse().forEach(item => {
+          const linkWrapper = document.createElement("a");
+          linkWrapper.href = item.link;
+          linkWrapper.style.textDecoration = "none";
+          linkWrapper.style.color = "inherit";
+        
+          const itemArticle = document.createElement("div");
+          itemArticle.className = "item-content";
+          itemArticle.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
+            <h1>${item.title}</h1>
+            <h2>${item.hashtags}</h2>
+            <p>${item.date}</p>
+            <hr>
           `;
-
-          container.appendChild(articleElement);
+        
+          linkWrapper.appendChild(itemArticle);
+          container.appendChild(linkWrapper);
         });
-    });
-  })
-  .catch(err => console.error('Gagal mengambil data:', err));
-</script>
+      })
+      .catch(err => console.error("Gagal ambil data artikel:", err));
+  </script>
 
   <script src="./upload/script/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="./upload/script/script.js" type="text/javascript" charset="utf-8"></script>
