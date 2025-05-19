@@ -49,90 +49,47 @@
 
   <div id="footerWeb"></div>
 
-  <script>
-    // Ganti dengan URL GitHub API untuk mendapatkan daftar file di folder 'edukasi'
-    fetch('https://api.github.com/repos/PapanNvHdvsjKBjajsnaoPwkdbKkKsksk/PapanNvHdvsjKBjajsnaoPwkdbKkKsksk.github.io/contents/edukasi')
-      .then(res => res.json())  // Mengambil data dalam format JSON
-    fetch('./api/pages-data.json')
-      .then(res => res.json())
-      .then(data => {
-        console.log("Data berhasil didapat:", data);
-        
-        const articles = data.filter(item => item.type === 'file' && item.name.endsWith('.html')).map(item => {
-          return fetch(item.download_url)  // Ambil file HTML dari URL download
-            .then(res => res.text())  // Parse file HTML menjadi teks
-            .then(html => {
-              // Gunakan DOMParser untuk mengonversi HTML menjadi elemen DOM
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(html, "text/html");
-        const container = document.getElementById("rekomendasiArtikel");
-        if (!container) return;
+<script>
+fetch('https://api.github.com/repos/jajskaoowoeixnmamqporisna/jajskaoowoeixnmamqporisna.github.io/contents/edukasi')
+  .then(response => response.json())
+  .then(files => {
+    const htmlFiles = files.filter(file => file.name.endsWith('.html'));
 
-              // Ambil data dari elemen-elemen yang ada di HTML
-              const title = doc.querySelector('#titleArticle') ? doc.querySelector('#titleArticle').innerText : '';
-              const hashtags = doc.querySelector('#hastagArticle') ? doc.querySelector('#hastagArticle').innerText : '';
-              const date = doc.querySelector('#dateUpload') ? doc.querySelector('#dateUpload').innerText : '';
-              const image = doc.querySelector('#imageArticle') ? doc.querySelector('#imageArticle').src : '';
+    const container = document.getElementById('rekomendasiArtikel');
 
-              return {
-                title,
-                hashtags,
-                date,
-                image,
-                name: item.name  // Menambahkan nama file untuk URL
-              };
-            });
-        });
-        data.forEach(item => {
-          const linkWrapper = document.createElement("a");
-          linkWrapper.href = item.link;
-          linkWrapper.style.textDecoration = "none";
-          linkWrapper.style.color = "inherit";
+    htmlFiles.forEach(file => {
+      fetch(file.download_url)
+        .then(res => res.text())
+        .then(htmlText => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, 'text/html');
 
-        // Tunggu hingga semua artikel selesai diambil
-        Promise.all(articles).then(articlesData => {
-          const container = document.getElementById("rekomendasiArtikel");
-          if (!container) {
-            console.error("Elemen dengan ID 'rekomendasiArtikel' tidak ditemukan di HTML.");
-            return;
-          }
-          const itemArticle = document.createElement("div");
-          itemArticle.className = "item-content";
-          itemArticle.innerHTML = `
-            <img src="${item.image}" alt="${item.title}">
-            <h1>${item.title}</h1>
-            <h2>${item.hashtags}</h2>
-            <p>${item.date}</p>
-            <hr>
+          const title = doc.querySelector('#titleArticle')?.innerText || 'Tanpa Judul';
+          const date = doc.querySelector('#dateUpload')?.innerText || 'Tanpa Tanggal';
+          const image = doc.querySelector('#imageArticle')?.src || '';
+          const hashtags = doc.querySelector('#hastagArticle')?.innerText || '';
+
+          const articleElement = document.createElement('a');
+          articleElement.href = `https://jelaskan.my.id/edukasi/${file.name}`;
+          articleElement.style.textDecoration = "none";
+          articleElement.style.color = "inherit";
+
+          articleElement.innerHTML = `
+            <div class="item-content">
+              <img src="${image}" alt="${title}" />
+              <h1>${title}</h1>
+              <h2>${hashtags}</h2>
+              <p>${date}</p>
+              <hr>
+            </div>
           `;
 
-          // Tampilkan data di halaman
-          articlesData.forEach(item => {
-            const linkWrapper = document.createElement("a");
-            linkWrapper.href = "https://jelaskan.my.id/edukasi/" + item.name;
-            linkWrapper.style.textDecoration = "none";
-            linkWrapper.style.color = "inherit";
-          
-            const itemArticle = document.createElement("div");
-            itemArticle.className = "item-content";
-            itemArticle.innerHTML = `
-              <img src="${item.image}" alt="${item.title}">
-              <h1>${item.title}</h1>
-              <h2>${item.hashtags}</h2>
-              <p>${item.date}</p>
-              <hr>
-            `;
-          
-            linkWrapper.appendChild(itemArticle);
-            container.appendChild(linkWrapper);
-          });
-          linkWrapper.appendChild(itemArticle);
-          container.appendChild(linkWrapper);
+          container.appendChild(articleElement);
         });
-      })
-      .catch(err => console.error("Gagal ambil data:", err));
-      .catch(err => console.error("Gagal ambil data artikel:", err));
-  </script>
+    });
+  })
+  .catch(err => console.error('Gagal mengambil data:', err));
+</script>
 
   <script src="./upload/script/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="./upload/script/script.js" type="text/javascript" charset="utf-8"></script>
