@@ -1,28 +1,28 @@
 [
   {
-    "judul": "Rekomendasi 10 Hewan Peliharaan Yang Cocok Untukmu",
-    "url_gambar": "https://cdn.pixabay.com/photo/2020/03/31/19/20/dog-4988985_1280.jpg",
-    "url_tujuan": "https://jelaskan.my.id/edukasi/rekomendasi-10-hewan-peliharaan.html",
-    "hashtag": ["#Hewan", "#HewanPeliharaan", "#HewanRumah", "#Rekomendasi"],
-    "time": "12 April 2025, 12:30 WIB",
+    "title": "Rekomendasi 10 Hewan Peliharaan Yang Cocok Untukmu",
+    "image": "https://cdn.pixabay.com/photo/2020/03/31/19/20/dog-4988985_1280.jpg",
+    "link": "https://jelaskan.my.id/edukasi/rekomendasi-10-hewan-peliharaan.html",
+    "hashtags": "#Hewan #HewanPeliharaan #HewanRumah #Rekomendasi",
+    "date": "12 April 2025, 12:30 WIB",
     "type": "Edukasi",
     "user": "11808910"
   },
   {
-    "judul": "Coming Soon, Jelaskan!",
-    "url_gambar": "https://i.imgur.com/7PhG8vn.png",
-    "url_tujuan": "https://jelaskan.my.id/berita/article.html",
-    "hashtag": ["#ComingSoon", "#Jelaskan", "#Information", "#YukSiniMiminJelaskan"],
-    "time": "12 April 2025, 14:45 WIB",
+    "title": "Coming Soon, Jelaskan!",
+    "image": "https://i.imgur.com/7PhG8vn.png",
+    "link": "https://jelaskan.my.id/berita/article.html",
+    "hashtags": "#ComingSoon #Jelaskan #Information #YukSiniMiminJelaskan",
+    "date": "12 April 2025, 14:45 WIB",
     "type": "News",
     "user": "11808910"
   },
   {
-    "judul": "Fenomena Alam Paling Langka Di Dunia",
-    "url_gambar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg/1200px-Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg",
-    "url_tujuan": "https://jelaskan.my.id/edukasi/fenomena-alam-paling-langka-di-dunia.html",
-    "hashtag": ["#Fenomena", "FenomenaAlam"],
-    "time": "26 April 2025, 08:08 WIB",
+    "title": "Fenomena Alam Paling Langka Di Dunia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg/1200px-Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg",
+    "link": "https://jelaskan.my.id/edukasi/fenomena-alam-paling-langka-di-dunia.html",
+    "hashtags": "#Fenomena #FenomenaAlam",
+    "date": "26 April 2025, 08:08 WIB",
     "type": "Edukasi",
     "user": "11808910"
   }
