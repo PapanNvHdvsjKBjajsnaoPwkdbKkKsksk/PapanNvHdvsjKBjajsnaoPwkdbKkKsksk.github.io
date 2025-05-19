@@ -25,6 +25,7 @@ body {
   }
   
   .container-content-article > .item-content {
+    cursor: pointer;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -72,6 +73,7 @@ body {
   }
   
   .container-content-article > .item-content {
+    cursor: pointer;
     display: block;
     width: 100%;
     height: auto;
@@ -101,4 +103,5 @@ body {
     font-weight: 400;
     font-size: 10px;
   }
+
 }
