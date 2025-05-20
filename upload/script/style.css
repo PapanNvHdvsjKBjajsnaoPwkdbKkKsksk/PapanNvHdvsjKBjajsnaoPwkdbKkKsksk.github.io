@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p {
   
   header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 8vh;
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
