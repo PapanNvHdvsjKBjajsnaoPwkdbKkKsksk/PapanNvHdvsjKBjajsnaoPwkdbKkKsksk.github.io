@@ -160,5 +160,23 @@
     "date": "Selasa, 20 Mei 2025 pukul 14.00 WIB",
     "type": "Edukasi",
     "user": "11808910"
+  },
+  {
+    "title": "Ini dia",
+    "image": "https://cdn.pixabay.com/photo/2014/06/21/08/43/rabbit-373691_1280.jpg",
+    "link": "https://jelaskan.my.id/edukasi/ini-dia.html",
+    "hashtags": "Hello World",
+    "date": "Rabu, 4 Juni 2025 pukul 07.24 WIB",
+    "type": "Edukasi",
+    "user": "11808910"
+  },
+  {
+    "title": "Heweh",
+    "image": "https://cdn.pixabay.com/photo/2014/06/21/08/43/rabbit-373691_1280.jpg",
+    "link": "https://jelaskan.my.id/edukasi/heweh.html",
+    "hashtags": "Shbaa",
+    "date": "Rabu, 4 Juni 2025 pukul 07.32 WIB",
+    "type": "Edukasi",
+    "user": "11808910"
   }
 ]
